@@ -1,0 +1,9 @@
+{
+    "frameworks": {
+	"net46":{
+	    "dependencies": {
+		"MongoDB.Driver": "2.3.0"
+	    }
+	}
+    }
+}
