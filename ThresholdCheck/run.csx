@@ -90,8 +90,8 @@ public static void Run(TimerInfo myTimer, TraceWriter log)
                         var twilioClient = new TwilioRestClient(twilioAccountSid, twilioAuthToken);
  
                         twilioClient.SendMessage(
-                            twilioTo,
                             twilioFrom,
+                            twilioTo,
                             deviceID + " needs a drink ASAP!"            
                         );
                     }
