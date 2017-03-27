@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 struct TempSample
 {
     public int temp;
+    public int humidity;
     public string sampleDate;
 }
 
@@ -37,6 +38,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
                 TempSample tempSample = new TempSample();
                 // we don't need a float here...
                 tempSample.temp = doc.GetValue("temp").ToInt32();
+                tempSample.humidity = doc.GetValue("humidity").ToInt32();
                 tempSample.sampleDate =  doc.GetValue("utc").ToString();
                 allSamples.Add(tempSample);
             }
