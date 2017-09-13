@@ -3,6 +3,8 @@ using MongoDB.Driver;
 using MongoDB.Bson.IO;
 using System.Net;
 
+# a change
+
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
 {
     log.Info("starting SoilCurrent function...");
